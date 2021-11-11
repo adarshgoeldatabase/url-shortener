@@ -1,1 +1,1 @@
-web: python manage.py collectstatic --noinput; gunicorn shorty.wsgi --log-file - python manage.py migrate --noinput
+web: python manage.py migrate --noinput && python manage.py collectstatic --noinput; gunicorn shorty.wsgi --log-file -
